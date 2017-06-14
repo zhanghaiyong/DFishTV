@@ -11,6 +11,11 @@
 		BF621F8F1EF16A13005895F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF621F8D1EF16A13005895F0 /* Main.storyboard */; };
 		BF621F911EF16A13005895F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF621F901EF16A13005895F0 /* Assets.xcassets */; };
 		BF621F941EF16A13005895F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF621F921EF16A13005895F0 /* LaunchScreen.storyboard */; };
+		BF621FB21EF17CEF005895F0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF621FB01EF17CEF005895F0 /* Home.storyboard */; };
+		BF621FB51EF17D03005895F0 /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF621FB31EF17D03005895F0 /* Live.storyboard */; };
+		BF621FB81EF17D19005895F0 /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF621FB61EF17D19005895F0 /* Follow.storyboard */; };
+		BF621FBB1EF17D29005895F0 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF621FB91EF17D29005895F0 /* Profile.storyboard */; };
+		BF621FBD1EF17F69005895F0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF621FBC1EF17F69005895F0 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		BF621F901EF16A13005895F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF621F931EF16A13005895F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF621F951EF16A13005895F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF621FB11EF17CEF005895F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DFishTV/Base.lproj/Home.storyboard; sourceTree = SOURCE_ROOT; };
+		BF621FB41EF17D03005895F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DFishTV/Base.lproj/Live.storyboard; sourceTree = SOURCE_ROOT; };
+		BF621FB71EF17D19005895F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DFishTV/Base.lproj/Follow.storyboard; sourceTree = SOURCE_ROOT; };
+		BF621FBA1EF17D29005895F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DFishTV/Base.lproj/Profile.storyboard; sourceTree = SOURCE_ROOT; };
+		BF621FBC1EF17F69005895F0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +64,6 @@
 			children = (
 				BF621F891EF16A13005895F0 /* AppDelegate.swift */,
 				BF621F9B1EF17270005895F0 /* Classes */,
-				BF621F8D1EF16A13005895F0 /* Main.storyboard */,
 				BF621F901EF16A13005895F0 /* Assets.xcassets */,
 				BF621F921EF16A13005895F0 /* LaunchScreen.storyboard */,
 				BF621F951EF16A13005895F0 /* Info.plist */,
@@ -69,8 +78,8 @@
 				BF621F9D1EF17270005895F0 /* Home */,
 				BF621F9E1EF17270005895F0 /* Live */,
 				BF621F9C1EF17270005895F0 /* Follow */,
-				BF621FA11EF17270005895F0 /* Tools */,
 				BF621FA01EF17270005895F0 /* Profile */,
+				BF621FA11EF17270005895F0 /* Tools */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -78,6 +87,7 @@
 		BF621F9C1EF17270005895F0 /* Follow */ = {
 			isa = PBXGroup;
 			children = (
+				BF621FB61EF17D19005895F0 /* Follow.storyboard */,
 			);
 			path = Follow;
 			sourceTree = "<group>";
@@ -85,6 +95,7 @@
 		BF621F9D1EF17270005895F0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				BF621FB01EF17CEF005895F0 /* Home.storyboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -92,6 +103,7 @@
 		BF621F9E1EF17270005895F0 /* Live */ = {
 			isa = PBXGroup;
 			children = (
+				BF621FB31EF17D03005895F0 /* Live.storyboard */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -99,6 +111,8 @@
 		BF621F9F1EF17270005895F0 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				BF621F8D1EF16A13005895F0 /* Main.storyboard */,
+				BF621FBC1EF17F69005895F0 /* MainViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -106,6 +120,7 @@
 		BF621FA01EF17270005895F0 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				BF621FB91EF17D29005895F0 /* Profile.storyboard */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -180,6 +195,10 @@
 				BF621F941EF16A13005895F0 /* LaunchScreen.storyboard in Resources */,
 				BF621F911EF16A13005895F0 /* Assets.xcassets in Resources */,
 				BF621F8F1EF16A13005895F0 /* Main.storyboard in Resources */,
+				BF621FB51EF17D03005895F0 /* Live.storyboard in Resources */,
+				BF621FB21EF17CEF005895F0 /* Home.storyboard in Resources */,
+				BF621FBB1EF17D29005895F0 /* Profile.storyboard in Resources */,
+				BF621FB81EF17D19005895F0 /* Follow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF621F8A1EF16A13005895F0 /* AppDelegate.swift in Sources */,
+				BF621FBD1EF17F69005895F0 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +223,7 @@
 				BF621F8E1EF16A13005895F0 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		BF621F921EF16A13005895F0 /* LaunchScreen.storyboard */ = {
@@ -211,6 +232,42 @@
 				BF621F931EF16A13005895F0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BF621FB01EF17CEF005895F0 /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF621FB11EF17CEF005895F0 /* Base */,
+			);
+			name = Home.storyboard;
+			path = ../Main;
+			sourceTree = "<group>";
+		};
+		BF621FB31EF17D03005895F0 /* Live.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF621FB41EF17D03005895F0 /* Base */,
+			);
+			name = Live.storyboard;
+			path = ../Main;
+			sourceTree = "<group>";
+		};
+		BF621FB61EF17D19005895F0 /* Follow.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF621FB71EF17D19005895F0 /* Base */,
+			);
+			name = Follow.storyboard;
+			path = ../Main;
+			sourceTree = "<group>";
+		};
+		BF621FB91EF17D29005895F0 /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF621FBA1EF17D29005895F0 /* Base */,
+			);
+			name = Profile.storyboard;
+			path = ../Main;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -257,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -302,7 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -318,7 +375,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = X37H2A9PP3;
 				INFOPLIST_FILE = DFishTV/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhang.DFishTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -334,7 +391,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = X37H2A9PP3;
 				INFOPLIST_FILE = DFishTV/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhang.DFishTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
