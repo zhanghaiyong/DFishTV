@@ -139,13 +139,18 @@ extension PageContentView : UICollectionViewDelegate {
         
         if currentOffsetX > startOffset { //左滑
         
+            //1.计算华东进度
             progress = currentOffsetX / scrollView.bounds.width - floor(currentOffsetX / scrollView.bounds.width)
+            //计算当前的index
             sourceIndex = Int(currentOffsetX/scrollView.bounds.width)
+            //计算移动后的index
             targetIndex = sourceIndex + 1
+            //当滑动到最右边，targetIndex等于子控制器数量-1
             if targetIndex >= childVcs.count {
             
                 targetIndex = childVcs.count-1
             }
+            //当滑动完毕后，将progress置1
             if currentOffsetX - startOffset == scrollView.bounds.width {
                 progress = 1
                 targetIndex = sourceIndex
@@ -159,18 +164,11 @@ extension PageContentView : UICollectionViewDelegate {
             if sourceIndex > childVcs.count {
                 sourceIndex = childVcs.count - 1
             }
-            
-//            if startOffset - currentOffsetX == scrollView.bounds.width {
-//                progress = 1
-//                sourceIndex = targetIndex
-//            }
         }
         
         print("progress = \(progress)   sourceIndex = \(sourceIndex)  targetIndex = \(targetIndex)")
-        
         delegate?.pageContent(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
-    
 }
 
 //MARK 对外暴露的方法前面不能加private
@@ -179,7 +177,6 @@ extension PageContentView {
     func setupCurrentIndex(currentIndex : Int) {
         
         isStopScroll = true
-        
         let offsetX = CGFloat(currentIndex) * collectionView.frame.width
         collectionView.setContentOffset(CGPoint(x:offsetX , y: 0), animated: true)
         

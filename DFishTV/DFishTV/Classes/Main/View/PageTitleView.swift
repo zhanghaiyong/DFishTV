@@ -8,10 +8,10 @@
 
 import UIKit
 
+//MARK：定义代理
 protocol PagetitleViewDelegate : class {
     
     func pageTitleView(titleView : PageTitleView,selectedIndex : Int)
-    
 }
 
 //定义常量
@@ -23,14 +23,11 @@ class PageTitleView: UIView {
 
   //MARK:-定义属性
      var titles : [String]
-    
+    //记录当前index
     var currentIndex : Int = 0
-    
+    //所有的titleLabel
     var titleLabels : [UILabel] = [UILabel]()
-    
     weak var delegate : PagetitleViewDelegate?
-    var scrollLineX : CGFloat = 0
-    
     
   //MARK:-懒加载属性 闭包创建
     lazy var scrollView : UIScrollView = {
@@ -43,8 +40,8 @@ class PageTitleView: UIView {
         return scrollView
     }()
     
+    //懒加载滑块
     lazy var scrollLine : UIView = {
-    
      let scrollLine = UIView()
      scrollLine.backgroundColor = UIColor(r: kNormalColor.0, g: kNormalColor.1, b: kNormalColor.2)
      return scrollLine
@@ -155,10 +152,10 @@ extension PageTitleView {
         currentIndex = currentLabel.tag
         
         //5.滚动条发生变化
-        scrollLineX = CGFloat(currentLabel.tag) * scrollLine.frame.width
+        let scrollLineX = CGFloat(currentLabel.tag) * scrollLine.frame.width
         
         UIView.animate(withDuration: 0.15) { 
-            self.scrollLine.frame.origin.x = self.scrollLineX
+            self.scrollLine.frame.origin.x = scrollLineX
         }
         
         //6.通知代理
@@ -178,8 +175,11 @@ extension PageTitleView {
         let targetLabel = titleLabels[targetIndex]
         
         //2.处理滑块逻辑
+        //2.1一共需要移动多少的距离
         let totalMoveX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
+        //通过progress来计算滑块的偏移量
         let moveX = progress * totalMoveX
+        //每次移动，在原来的基础上sourceLabel.frame.origin.x加上偏移量
         scrollLine.frame.origin.x = sourceLabel.frame.origin.x + moveX
         
         //3.颜色的渐变(通过RGB)
