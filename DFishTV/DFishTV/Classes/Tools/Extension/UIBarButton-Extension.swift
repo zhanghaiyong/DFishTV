@@ -11,13 +11,13 @@ import UIKit
 
 extension UIBarButtonItem {
 
-    //类方法
+    //class类方法
     class func creatItem(imageName:String,highImageName:String,size:CGSize) -> UIBarButtonItem {
-        let point = CGPoint(x: 0, y: 0)
+
         let btn = UIButton()
         btn.setImage(UIImage(named:imageName), for: .normal)
         btn.setImage(UIImage(named:highImageName), for: .normal)
-        btn.frame = CGRect(origin: point, size: size)
+        btn.frame = CGRect(origin: CGPoint.zero, size: size)
         return UIBarButtonItem(customView: btn)
     }
     

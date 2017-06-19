@@ -10,14 +10,15 @@ import UIKit
 
 private let kTitleViewH : CGFloat = 40
 
-class HomeViewController: UIViewController,PagetitleViewDelegate {
+class HomeViewController: UIViewController,PagetitleViewDelegate,PageContentViewDelegate {
 
-    //MARK:=懒加载属性
+    //MARK:block懒加载属性  在block中使用self，为了避免循环引用，需加上 [weak self] in
     lazy var pageTitleView : PageTitleView = {[weak self] in
         let titleFrame = CGRect(x: 0, y: kStatusBarH+kNavigationBarH, width:kScreenW , height: kTitleViewH)
         let titles = ["推荐","游戏","娱乐","趣玩"]
         let titleView = PageTitleView(frame: titleFrame, titles: titles)
         titleView.delegate = self
+
         return titleView
     }()
     
@@ -36,7 +37,7 @@ class HomeViewController: UIViewController,PagetitleViewDelegate {
             childVcs.append(vc)
         }
         let pageContentView = PageContentView(frame: pageContentFrame, childVcs: childVcs, parentViewController: self)
-        
+        pageContentView.delegate = self
         return pageContentView
     }()
     
@@ -98,5 +99,14 @@ extension HomeViewController {
     func pageTitleView(titleView: PageTitleView, selectedIndex : Int) {
         
         pageContentView.setupCurrentIndex(currentIndex: selectedIndex)
+    }
+}
+
+//MARK 遵循PageContentViewDelegate协议
+extension HomeViewController {
+
+    func pageContent(progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        
+        pageTitleView.changeTitlesWithProgress(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
 }

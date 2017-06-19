@@ -8,12 +8,21 @@
 
 import UIKit
 
+protocol PageContentViewDelegate : class {
+    
+    func pageContent(progress : CGFloat,sourceIndex : Int,targetIndex : Int)
+}
+
 private let contentCellID = "contentCellID"
 
 class PageContentView: UIView {
     
     var childVcs : [UIViewController]
     weak var parentViewController : UIViewController?
+    var startOffset : CGFloat = 0
+    weak var delegate : PageContentViewDelegate?
+    //当点击label的时候，禁止UIScrollView滚动
+    var isStopScroll : Bool = false
     
     //MARK:懒加载属性
     lazy var collectionView : UICollectionView = {[weak self] in
@@ -34,6 +43,7 @@ class PageContentView: UIView {
         collectionView.bounces = false
         collectionView.isPagingEnabled = true
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: contentCellID)
         return collectionView
         
@@ -89,7 +99,6 @@ extension PageContentView : UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: contentCellID, for: indexPath)
         
         //2.给cell设置内容
-        
         for view in cell.contentView.subviews {
             view.removeFromSuperview()
         }
@@ -101,10 +110,75 @@ extension PageContentView : UICollectionViewDataSource {
     }
 }
 
-//MARK 对外暴露的方法
-extension PageContentView {
+//MARK:UICollectionDelegate
+extension PageContentView : UICollectionViewDelegate {
 
+    //开始拖拽
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        
+        startOffset = scrollView.contentOffset.x
+        //当拖拽的时候，不禁止UIScrollView滚动
+        isStopScroll = false
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        if isStopScroll {
+        
+            return;
+        }
+        
+        print("滚动了")
+        //初始化需要获取的值
+        var progress : CGFloat = 0
+        var sourceIndex : Int = 0
+        var targetIndex : Int = 0
+        
+        //当前偏移量
+        let currentOffsetX = scrollView.contentOffset.x
+        
+        if currentOffsetX > startOffset { //左滑
+        
+            progress = currentOffsetX / scrollView.bounds.width - floor(currentOffsetX / scrollView.bounds.width)
+            sourceIndex = Int(currentOffsetX/scrollView.bounds.width)
+            targetIndex = sourceIndex + 1
+            if targetIndex >= childVcs.count {
+            
+                targetIndex = childVcs.count-1
+            }
+            if currentOffsetX - startOffset == scrollView.bounds.width {
+                progress = 1
+                targetIndex = sourceIndex
+            }
+            
+        }else {  //右滑
+        
+            progress = 1 - (currentOffsetX / scrollView.bounds.width - floor(currentOffsetX / scrollView.bounds.width))
+            targetIndex = Int(currentOffsetX/scrollView.bounds.width)
+            sourceIndex = targetIndex + 1
+            if sourceIndex > childVcs.count {
+                sourceIndex = childVcs.count - 1
+            }
+            
+//            if startOffset - currentOffsetX == scrollView.bounds.width {
+//                progress = 1
+//                sourceIndex = targetIndex
+//            }
+        }
+        
+        print("progress = \(progress)   sourceIndex = \(sourceIndex)  targetIndex = \(targetIndex)")
+        
+        delegate?.pageContent(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+    }
+    
+}
+
+//MARK 对外暴露的方法前面不能加private
+extension PageContentView {
+    
     func setupCurrentIndex(currentIndex : Int) {
+        
+        isStopScroll = true
         
         let offsetX = CGFloat(currentIndex) * collectionView.frame.width
         collectionView.setContentOffset(CGPoint(x:offsetX , y: 0), animated: true)
