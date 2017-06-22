@@ -15,7 +15,7 @@ class HomeViewController: UIViewController,PagetitleViewDelegate,PageContentView
     //MARK:block懒加载属性  在block中使用self，为了避免循环引用，需加上 [weak self] in
     lazy var pageTitleView : PageTitleView = {[weak self] in
         let titleFrame = CGRect(x: 0, y: kStatusBarH+kNavigationBarH, width:kScreenW , height: kTitleViewH)
-        let titles = ["推荐","游戏","娱乐","趣玩"]
+        let titles = ["推荐","手游","娱乐","游戏","趣玩"]
         let titleView = PageTitleView(frame: titleFrame, titles: titles)
         titleView.delegate = self
 
@@ -30,7 +30,7 @@ class HomeViewController: UIViewController,PagetitleViewDelegate,PageContentView
         
         //2.确定所有的字控制器
         var childVcs = [UIViewController]()
-        for _ in 0..<4 {
+        for _ in 0...4 {
         
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
@@ -62,6 +62,11 @@ extension HomeViewController{
         //设置导航栏
         setupNavigationBar()
         
+        //设置searchView
+        let searchView = Bundle.main.loadNibNamed("SearchView", owner: self, options: nil)?.last as? SearchView
+        searchView?.frame = CGRect(x: kScreenW/4, y: 9, width: kScreenW/2, height: 28)
+        navigationItem.titleView = searchView
+        
         //添加pageTitleView
         view.addSubview(pageTitleView)
         
@@ -84,12 +89,10 @@ extension HomeViewController{
         let size = CGSize(width: 30, height: 30)
         let historyItem = UIBarButtonItem(imageName: "viewHistoryIcon", highImageName: "viewHistoryIconHL", size: size)
         
-        //搜索按钮
-        let searchItem = UIBarButtonItem(imageName: "searchBtnIcon", highImageName: "searchBtnIconHL", size: size)
+        //游戏中心
+        let gameCenterItem = UIBarButtonItem(imageName: "home_newGameicon", highImageName: "home_newGameicon_clicked", size: size)
         
-        //扫描按钮
-        let qrscanItem = UIBarButtonItem(imageName: "scanIcon", highImageName: "scanIconHL", size: size)
-        navigationItem.rightBarButtonItems = [qrscanItem,searchItem,historyItem]
+        navigationItem.rightBarButtonItems = [historyItem,gameCenterItem]
     }
 }
 

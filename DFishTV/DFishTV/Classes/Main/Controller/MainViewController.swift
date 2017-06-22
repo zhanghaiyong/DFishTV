@@ -17,6 +17,7 @@ class MainViewController: UITabBarController {
         addChildVc(storyName: "Home")
         addChildVc(storyName: "Live")
         addChildVc(storyName: "Follow")
+        addChildVc(storyName: "Discovery")
         addChildVc(storyName: "Profile")
         
     }

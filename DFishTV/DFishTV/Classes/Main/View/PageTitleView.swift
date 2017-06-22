@@ -43,7 +43,7 @@ class PageTitleView: UIView {
     //懒加载滑块
     lazy var scrollLine : UIView = {
      let scrollLine = UIView()
-     scrollLine.backgroundColor = UIColor(r: kNormalColor.0, g: kNormalColor.1, b: kNormalColor.2)
+     scrollLine.backgroundColor = UIColor(r: kSelectColor.0, g: kSelectColor.1, b: kSelectColor.2)
      return scrollLine
     }()
     

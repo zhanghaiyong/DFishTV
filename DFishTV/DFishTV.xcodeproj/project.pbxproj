@@ -15,6 +15,9 @@
 		BF621FB51EF17D03005895F0 /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF621FB31EF17D03005895F0 /* Live.storyboard */; };
 		BF621FB81EF17D19005895F0 /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF621FB61EF17D19005895F0 /* Follow.storyboard */; };
 		BF621FBB1EF17D29005895F0 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF621FB91EF17D29005895F0 /* Profile.storyboard */; };
+		BF62FCBD1EFC0C0F0013D55E /* Discovery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF62FCBC1EFC0C0F0013D55E /* Discovery.storyboard */; };
+		BF62FCBF1EFC0D0A0013D55E /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62FCBE1EFC0D0A0013D55E /* SearchView.swift */; };
+		BF62FCC11EFC0D1C0013D55E /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF62FCC01EFC0D1C0013D55E /* SearchView.xib */; };
 		BFED7B711EF2CB670077350F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED7B701EF2CB670077350F /* MainViewController.swift */; };
 		BFED7B731EF2CB9D0077350F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED7B721EF2CB9D0077350F /* HomeViewController.swift */; };
 		BFED7B791EF2DC3B0077350F /* UIBarButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED7B781EF2DC3B0077350F /* UIBarButton-Extension.swift */; };
@@ -35,6 +38,9 @@
 		BF621FB41EF17D03005895F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DFishTV/Base.lproj/Live.storyboard; sourceTree = SOURCE_ROOT; };
 		BF621FB71EF17D19005895F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DFishTV/Base.lproj/Follow.storyboard; sourceTree = SOURCE_ROOT; };
 		BF621FBA1EF17D29005895F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DFishTV/Base.lproj/Profile.storyboard; sourceTree = SOURCE_ROOT; };
+		BF62FCBC1EFC0C0F0013D55E /* Discovery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discovery.storyboard; sourceTree = "<group>"; };
+		BF62FCBE1EFC0D0A0013D55E /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		BF62FCC01EFC0D1C0013D55E /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
 		BFED7B701EF2CB670077350F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = DFishTV/Classes/Main/Controller/MainViewController.swift; sourceTree = SOURCE_ROOT; };
 		BFED7B721EF2CB9D0077350F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BFED7B781EF2DC3B0077350F /* UIBarButton-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButton-Extension.swift"; sourceTree = "<group>"; };
@@ -91,6 +97,7 @@
 				BF621F9D1EF17270005895F0 /* Home */,
 				BF621F9E1EF17270005895F0 /* Live */,
 				BF621F9C1EF17270005895F0 /* Follow */,
+				BF62FCB91EFC0B4D0013D55E /* Discovery */,
 				BF621FA01EF17270005895F0 /* Profile */,
 			);
 			path = Classes;
@@ -140,6 +147,14 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		BF62FCB91EFC0B4D0013D55E /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				BF62FCBC1EFC0C0F0013D55E /* Discovery.storyboard */,
+			);
+			path = Discovery;
+			sourceTree = "<group>";
+		};
 		BFED7B6A1EF2CAB80077350F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +174,8 @@
 		BFED7B6C1EF2CAB80077350F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BF62FCBE1EFC0D0A0013D55E /* SearchView.swift */,
+				BF62FCC01EFC0D1C0013D55E /* SearchView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -272,7 +289,9 @@
 				BF621F941EF16A13005895F0 /* LaunchScreen.storyboard in Resources */,
 				BF621F911EF16A13005895F0 /* Assets.xcassets in Resources */,
 				BF621F8F1EF16A13005895F0 /* Main.storyboard in Resources */,
+				BF62FCBD1EFC0C0F0013D55E /* Discovery.storyboard in Resources */,
 				BF621FB51EF17D03005895F0 /* Live.storyboard in Resources */,
+				BF62FCC11EFC0D1C0013D55E /* SearchView.xib in Resources */,
 				BF621FB21EF17CEF005895F0 /* Home.storyboard in Resources */,
 				BF621FBB1EF17D29005895F0 /* Profile.storyboard in Resources */,
 				BF621FB81EF17D19005895F0 /* Follow.storyboard in Resources */,
@@ -286,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF62FCBF1EFC0D0A0013D55E /* SearchView.swift in Sources */,
 				BF621F8A1EF16A13005895F0 /* AppDelegate.swift in Sources */,
 				BFED7B831EF2E8C40077350F /* UIColor-Extension.swift in Sources */,
 				BFED7B711EF2CB670077350F /* MainViewController.swift in Sources */,
