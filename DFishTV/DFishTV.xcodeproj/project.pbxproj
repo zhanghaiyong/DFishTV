@@ -18,6 +18,11 @@
 		BF62FCBD1EFC0C0F0013D55E /* Discovery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF62FCBC1EFC0C0F0013D55E /* Discovery.storyboard */; };
 		BF62FCBF1EFC0D0A0013D55E /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62FCBE1EFC0D0A0013D55E /* SearchView.swift */; };
 		BF62FCC11EFC0D1C0013D55E /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF62FCC01EFC0D1C0013D55E /* SearchView.xib */; };
+		BF62FCC31EFC116F0013D55E /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62FCC21EFC116F0013D55E /* RecommendViewController.swift */; };
+		BF62FCC61EFC180D0013D55E /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62FCC41EFC180D0013D55E /* CollectionHeaderView.swift */; };
+		BF62FCC71EFC180D0013D55E /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF62FCC51EFC180D0013D55E /* CollectionHeaderView.xib */; };
+		BF62FCCA1EFC1F680013D55E /* CollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62FCC81EFC1F680013D55E /* CollectionNormalCell.swift */; };
+		BF62FCCB1EFC1F680013D55E /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF62FCC91EFC1F680013D55E /* CollectionNormalCell.xib */; };
 		BFED7B711EF2CB670077350F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED7B701EF2CB670077350F /* MainViewController.swift */; };
 		BFED7B731EF2CB9D0077350F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED7B721EF2CB9D0077350F /* HomeViewController.swift */; };
 		BFED7B791EF2DC3B0077350F /* UIBarButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED7B781EF2DC3B0077350F /* UIBarButton-Extension.swift */; };
@@ -41,6 +46,11 @@
 		BF62FCBC1EFC0C0F0013D55E /* Discovery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discovery.storyboard; sourceTree = "<group>"; };
 		BF62FCBE1EFC0D0A0013D55E /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		BF62FCC01EFC0D1C0013D55E /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
+		BF62FCC21EFC116F0013D55E /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		BF62FCC41EFC180D0013D55E /* CollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
+		BF62FCC51EFC180D0013D55E /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
+		BF62FCC81EFC1F680013D55E /* CollectionNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionNormalCell.swift; path = DFishTV/Classes/Main/View/CollectionNormalCell.swift; sourceTree = SOURCE_ROOT; };
+		BF62FCC91EFC1F680013D55E /* CollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollectionNormalCell.xib; path = DFishTV/Classes/Main/View/CollectionNormalCell.xib; sourceTree = SOURCE_ROOT; };
 		BFED7B701EF2CB670077350F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = DFishTV/Classes/Main/Controller/MainViewController.swift; sourceTree = SOURCE_ROOT; };
 		BFED7B721EF2CB9D0077350F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BFED7B781EF2DC3B0077350F /* UIBarButton-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButton-Extension.swift"; sourceTree = "<group>"; };
@@ -160,6 +170,7 @@
 			children = (
 				BF621FB01EF17CEF005895F0 /* Home.storyboard */,
 				BFED7B721EF2CB9D0077350F /* HomeViewController.swift */,
+				BF62FCC21EFC116F0013D55E /* RecommendViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -176,6 +187,8 @@
 			children = (
 				BF62FCBE1EFC0D0A0013D55E /* SearchView.swift */,
 				BF62FCC01EFC0D1C0013D55E /* SearchView.xib */,
+				BF62FCC41EFC180D0013D55E /* CollectionHeaderView.swift */,
+				BF62FCC51EFC180D0013D55E /* CollectionHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,6 +216,8 @@
 			children = (
 				BFED7B7A1EF2DC840077350F /* PageTitleView.swift */,
 				BFED7B801EF2E6BA0077350F /* PageContentView.swift */,
+				BF62FCC81EFC1F680013D55E /* CollectionNormalCell.swift */,
+				BF62FCC91EFC1F680013D55E /* CollectionNormalCell.xib */,
 			);
 			name = View;
 			path = view;
@@ -287,8 +302,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF621F941EF16A13005895F0 /* LaunchScreen.storyboard in Resources */,
+				BF62FCCB1EFC1F680013D55E /* CollectionNormalCell.xib in Resources */,
 				BF621F911EF16A13005895F0 /* Assets.xcassets in Resources */,
 				BF621F8F1EF16A13005895F0 /* Main.storyboard in Resources */,
+				BF62FCC71EFC180D0013D55E /* CollectionHeaderView.xib in Resources */,
 				BF62FCBD1EFC0C0F0013D55E /* Discovery.storyboard in Resources */,
 				BF621FB51EF17D03005895F0 /* Live.storyboard in Resources */,
 				BF62FCC11EFC0D1C0013D55E /* SearchView.xib in Resources */,
@@ -306,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF62FCBF1EFC0D0A0013D55E /* SearchView.swift in Sources */,
+				BF62FCC61EFC180D0013D55E /* CollectionHeaderView.swift in Sources */,
 				BF621F8A1EF16A13005895F0 /* AppDelegate.swift in Sources */,
 				BFED7B831EF2E8C40077350F /* UIColor-Extension.swift in Sources */,
 				BFED7B711EF2CB670077350F /* MainViewController.swift in Sources */,
@@ -314,6 +332,8 @@
 				BFED7B731EF2CB9D0077350F /* HomeViewController.swift in Sources */,
 				BFED7B7F1EF2DE210077350F /* Common.swift in Sources */,
 				BFED7B791EF2DC3B0077350F /* UIBarButton-Extension.swift in Sources */,
+				BF62FCCA1EFC1F680013D55E /* CollectionNormalCell.swift in Sources */,
+				BF62FCC31EFC116F0013D55E /* RecommendViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
