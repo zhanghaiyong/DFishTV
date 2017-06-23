@@ -18,12 +18,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="151" height="122"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="空白空白" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7c-YV-nxf">
-                        <rect key="frame" x="0.0" y="101" width="151" height="16"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="qG8-xi-yAn">
                         <rect key="frame" x="0.0" y="0.0" width="151" height="96"/>
                         <userDefinedRuntimeAttributes>
@@ -33,14 +27,27 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lN3-1L-dWM">
-                        <rect key="frame" x="96" y="3" width="52" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="空白空白" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7c-YV-nxf">
+                        <rect key="frame" x="0.0" y="101" width="151" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69O-DF-FZr">
+                        <rect key="frame" x="94" y="5" width="52" height="20"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.32309144295436243" colorSpace="custom" customColorSpace="sRGB"/>
                         <rect key="contentStretch" x="0.80000000000000004" y="0.0" width="0.5" height="1"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="0ZO-ik-o5q"/>
+                            <constraint firstAttribute="height" constant="20" id="cee-fW-n8h"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <state key="normal" title=" 43.9万 " image="close_view_persons" backgroundImage="column_header_mask"/>
+                        <inset key="imageEdgeInsets" minX="2" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title=" 43.9万 " image="close_view_persons"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mwz-pv-K7E">
                         <rect key="frame" x="4" y="76" width="44" height="18"/>
@@ -51,6 +58,7 @@
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="69O-DF-FZr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="5Z3-q0-YUC"/>
                 <constraint firstItem="Mwz-pv-K7E" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="9L0-aR-OwG"/>
                 <constraint firstItem="g7c-YV-nxf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Bnt-cg-cxx"/>
                 <constraint firstAttribute="bottom" secondItem="g7c-YV-nxf" secondAttribute="bottom" constant="5" id="Co2-hp-gWo"/>
@@ -60,8 +68,7 @@
                 <constraint firstItem="qG8-xi-yAn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YdH-Zd-zqJ"/>
                 <constraint firstItem="g7c-YV-nxf" firstAttribute="top" secondItem="qG8-xi-yAn" secondAttribute="bottom" constant="5" id="fW6-cA-4re"/>
                 <constraint firstItem="g7c-YV-nxf" firstAttribute="top" secondItem="Mwz-pv-K7E" secondAttribute="bottom" constant="7" id="gCB-wB-QhF"/>
-                <constraint firstItem="lN3-1L-dWM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="xA9-s0-QiI"/>
-                <constraint firstAttribute="trailing" secondItem="lN3-1L-dWM" secondAttribute="trailing" constant="3" id="xJo-z5-9Hp"/>
+                <constraint firstAttribute="trailing" secondItem="69O-DF-FZr" secondAttribute="trailing" constant="5" id="jRh-jN-JSn"/>
             </constraints>
             <size key="customSize" width="151" height="122"/>
             <point key="canvasLocation" x="-161.5" y="-120"/>
@@ -70,7 +77,6 @@
     <resources>
         <image name="Img_default" width="172" height="103"/>
         <image name="close_view_persons" width="10" height="10"/>
-        <image name="column_header_mask" width="9" height="40"/>
         <image name="search_bar_combo_item_live" width="18" height="18"/>
     </resources>
 </document>
