@@ -15,7 +15,6 @@ enum MethodType {
 }
 
 class NetworkTools {
-
     
     //@escaping 逃逸闭包 函数执行完成之后调用
     class func requestData(type : MethodType,url : String,params : [String : String]? = nil,finishedCallBack :  @escaping (_ result : AnyObject) -> ()) {

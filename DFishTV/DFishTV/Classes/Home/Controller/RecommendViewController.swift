@@ -58,17 +58,21 @@ class RecommendViewController: UIViewController {
 
         //创建UI界面
         setupUI()
-//        
-//        
-//        Alamofire.request("http://httpbin.org/get").responseJSON { (response) in
-//            
-//            guard let result = response.result.value else {
-//                print(response.result.error as Any)
-//                return
-//            }
-//            print(result)
-//        }
-        
+
+        hotData()
+    }
+}
+
+//MARK:请求数据
+extension RecommendViewController {
+
+    //最热数据
+    func hotData() {
+    
+        NetworkTools.requestData(type: .GET, url: kHot) { (result) in
+            
+            print(result)
+        }
     }
 }
 

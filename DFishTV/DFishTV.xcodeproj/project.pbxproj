@@ -33,6 +33,8 @@
 		BFED7B7F1EF2DE210077350F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED7B7E1EF2DE210077350F /* Common.swift */; };
 		BFED7B811EF2E6BA0077350F /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED7B801EF2E6BA0077350F /* PageContentView.swift */; };
 		BFED7B831EF2E8C40077350F /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED7B821EF2E8C40077350F /* UIColor-Extension.swift */; };
+		BFF387471F015A2700CA870C /* AnchorGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF387441F015A2700CA870C /* AnchorGroup.m */; };
+		BFF387481F015A2700CA870C /* AnchorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF387461F015A2700CA870C /* AnchorModel.m */; };
 		C689DD53BB75DA15EF727FD7 /* Pods_DFishTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09F788A2714B617AC29A1746 /* Pods_DFishTV.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,7 @@
 		BF62FCCC1EFD411C0013D55E /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
 		BF62FCCD1EFD411C0013D55E /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
 		BF9CEDAB1F0143CC00DE37D3 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		BF9FBD581F01617E00656DD0 /* DFishTV-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DFishTV-Bridging-Header.h"; sourceTree = "<group>"; };
 		BFED7B701EF2CB670077350F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = DFishTV/Classes/Main/Controller/MainViewController.swift; sourceTree = SOURCE_ROOT; };
 		BFED7B721EF2CB9D0077350F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BFED7B781EF2DC3B0077350F /* UIBarButton-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButton-Extension.swift"; sourceTree = "<group>"; };
@@ -68,6 +71,11 @@
 		BFED7B7E1EF2DE210077350F /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		BFED7B801EF2E6BA0077350F /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageContentView.swift; path = DFishTV/Classes/Main/View/PageContentView.swift; sourceTree = SOURCE_ROOT; };
 		BFED7B821EF2E8C40077350F /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		BFF387431F015A2700CA870C /* AnchorGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnchorGroup.h; sourceTree = "<group>"; };
+		BFF387441F015A2700CA870C /* AnchorGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnchorGroup.m; sourceTree = "<group>"; };
+		BFF387451F015A2700CA870C /* AnchorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnchorModel.h; sourceTree = "<group>"; };
+		BFF387461F015A2700CA870C /* AnchorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnchorModel.m; sourceTree = "<group>"; };
+		BFF387501F015DA300CA870C /* DFishTV-bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DFishTV-bridge.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,10 +120,12 @@
 			isa = PBXGroup;
 			children = (
 				BF621F891EF16A13005895F0 /* AppDelegate.swift */,
+				BF9FBD581F01617E00656DD0 /* DFishTV-Bridging-Header.h */,
 				BF621F9B1EF17270005895F0 /* Classes */,
 				BF621F901EF16A13005895F0 /* Assets.xcassets */,
 				BF621F921EF16A13005895F0 /* LaunchScreen.storyboard */,
 				BF621F951EF16A13005895F0 /* Info.plist */,
+				BFF387501F015DA300CA870C /* DFishTV-bridge.h */,
 			);
 			path = DFishTV;
 			sourceTree = "<group>";
@@ -227,6 +237,10 @@
 		BFED7B6E1EF2CAE80077350F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BFF387431F015A2700CA870C /* AnchorGroup.h */,
+				BFF387441F015A2700CA870C /* AnchorGroup.m */,
+				BFF387451F015A2700CA870C /* AnchorModel.h */,
+				BFF387461F015A2700CA870C /* AnchorModel.m */,
 			);
 			name = Model;
 			path = model;
@@ -310,6 +324,7 @@
 					BF621F851EF16A13005895F0 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = X37H2A9PP3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -411,6 +426,7 @@
 				BF62FCBF1EFC0D0A0013D55E /* SearchView.swift in Sources */,
 				BF62FCC61EFC180D0013D55E /* CollectionHeaderView.swift in Sources */,
 				BF621F8A1EF16A13005895F0 /* AppDelegate.swift in Sources */,
+				BFF387481F015A2700CA870C /* AnchorModel.m in Sources */,
 				BFED7B831EF2E8C40077350F /* UIColor-Extension.swift in Sources */,
 				BFED7B711EF2CB670077350F /* MainViewController.swift in Sources */,
 				BFED7B7B1EF2DC840077350F /* PageTitleView.swift in Sources */,
@@ -421,6 +437,7 @@
 				BF62FCCE1EFD411C0013D55E /* CollectionPrettyCell.swift in Sources */,
 				BF62FCCA1EFC1F680013D55E /* CollectionNormalCell.swift in Sources */,
 				BF62FCC31EFC116F0013D55E /* RecommendViewController.swift in Sources */,
+				BFF387471F015A2700CA870C /* AnchorGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,12 +601,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = X37H2A9PP3;
 				INFOPLIST_FILE = DFishTV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhanghaiyong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/zhanghaiyong/Desktop/斗鱼TV/DFishTV/DFishTV/DFishTV/DFishTV-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -601,12 +621,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = X37H2A9PP3;
 				INFOPLIST_FILE = DFishTV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhanghaiyong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/zhanghaiyong/Desktop/斗鱼TV/DFishTV/DFishTV/DFishTV/DFishTV-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
