@@ -1,0 +1,6 @@
+framework module Pods_DFishTV {
+  umbrella header "Pods-DFishTV-umbrella.h"
+
+  export *
+  module * { export * }
+}

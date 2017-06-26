@@ -59,7 +59,7 @@
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <state key="normal" title=" 地址" image="dyla_ico_location">
-                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
                 </subviews>

@@ -25,6 +25,7 @@
 		BF62FCCB1EFC1F680013D55E /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF62FCC91EFC1F680013D55E /* CollectionNormalCell.xib */; };
 		BF62FCCE1EFD411C0013D55E /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62FCCC1EFD411C0013D55E /* CollectionPrettyCell.swift */; };
 		BF62FCCF1EFD411C0013D55E /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF62FCCD1EFD411C0013D55E /* CollectionPrettyCell.xib */; };
+		BF9CEDAC1F0143CC00DE37D3 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9CEDAB1F0143CC00DE37D3 /* NetworkTools.swift */; };
 		BFED7B711EF2CB670077350F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED7B701EF2CB670077350F /* MainViewController.swift */; };
 		BFED7B731EF2CB9D0077350F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED7B721EF2CB9D0077350F /* HomeViewController.swift */; };
 		BFED7B791EF2DC3B0077350F /* UIBarButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED7B781EF2DC3B0077350F /* UIBarButton-Extension.swift */; };
@@ -32,9 +33,13 @@
 		BFED7B7F1EF2DE210077350F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED7B7E1EF2DE210077350F /* Common.swift */; };
 		BFED7B811EF2E6BA0077350F /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED7B801EF2E6BA0077350F /* PageContentView.swift */; };
 		BFED7B831EF2E8C40077350F /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED7B821EF2E8C40077350F /* UIColor-Extension.swift */; };
+		C689DD53BB75DA15EF727FD7 /* Pods_DFishTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09F788A2714B617AC29A1746 /* Pods_DFishTV.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09F788A2714B617AC29A1746 /* Pods_DFishTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DFishTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1363E7947C022747E23259F4 /* Pods-DFishTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DFishTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-DFishTV/Pods-DFishTV.release.xcconfig"; sourceTree = "<group>"; };
+		6E558BDFE5C17E20DAB4599B /* Pods-DFishTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DFishTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DFishTV/Pods-DFishTV.debug.xcconfig"; sourceTree = "<group>"; };
 		BF621F861EF16A13005895F0 /* DFishTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DFishTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF621F891EF16A13005895F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF621F8E1EF16A13005895F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,6 +60,7 @@
 		BF62FCC91EFC1F680013D55E /* CollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollectionNormalCell.xib; path = DFishTV/Classes/Main/View/CollectionNormalCell.xib; sourceTree = SOURCE_ROOT; };
 		BF62FCCC1EFD411C0013D55E /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
 		BF62FCCD1EFD411C0013D55E /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
+		BF9CEDAB1F0143CC00DE37D3 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		BFED7B701EF2CB670077350F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = DFishTV/Classes/Main/Controller/MainViewController.swift; sourceTree = SOURCE_ROOT; };
 		BFED7B721EF2CB9D0077350F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BFED7B781EF2DC3B0077350F /* UIBarButton-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButton-Extension.swift"; sourceTree = "<group>"; };
@@ -69,17 +75,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C689DD53BB75DA15EF727FD7 /* Pods_DFishTV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		548D58093ECABE38BD9C1994 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09F788A2714B617AC29A1746 /* Pods_DFishTV.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BF621F7D1EF16A13005895F0 = {
 			isa = PBXGroup;
 			children = (
 				BF621F881EF16A13005895F0 /* DFishTV */,
 				BF621F871EF16A13005895F0 /* Products */,
+				FD0ACCFF932C95686E6340A2 /* Pods */,
+				548D58093ECABE38BD9C1994 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -234,6 +251,7 @@
 			children = (
 				BFED7B751EF2D4360077350F /* Extension */,
 				BFED7B7E1EF2DE210077350F /* Common.swift */,
+				BF9CEDAB1F0143CC00DE37D3 /* NetworkTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -247,6 +265,15 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		FD0ACCFF932C95686E6340A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E558BDFE5C17E20DAB4599B /* Pods-DFishTV.debug.xcconfig */,
+				1363E7947C022747E23259F4 /* Pods-DFishTV.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -254,9 +281,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF621F981EF16A13005895F0 /* Build configuration list for PBXNativeTarget "DFishTV" */;
 			buildPhases = (
+				EB076EEE968C4D7543CCD78F /* [CP] Check Pods Manifest.lock */,
 				BF621F821EF16A13005895F0 /* Sources */,
 				BF621F831EF16A13005895F0 /* Frameworks */,
 				BF621F841EF16A13005895F0 /* Resources */,
+				41E06CD8B52BFE13E2F3776A /* [CP] Embed Pods Frameworks */,
+				A3E4BBC9111ECA8C30F79D44 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -324,11 +354,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		41E06CD8B52BFE13E2F3776A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DFishTV/Pods-DFishTV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3E4BBC9111ECA8C30F79D44 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DFishTV/Pods-DFishTV-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB076EEE968C4D7543CCD78F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BF621F821EF16A13005895F0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9CEDAC1F0143CC00DE37D3 /* NetworkTools.swift in Sources */,
 				BF62FCBF1EFC0D0A0013D55E /* SearchView.swift in Sources */,
 				BF62FCC61EFC180D0013D55E /* CollectionHeaderView.swift in Sources */,
 				BF621F8A1EF16A13005895F0 /* AppDelegate.swift in Sources */,
@@ -501,6 +580,7 @@
 		};
 		BF621F991EF16A13005895F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E558BDFE5C17E20DAB4599B /* Pods-DFishTV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -517,6 +597,7 @@
 		};
 		BF621F9A1EF16A13005895F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1363E7947C022747E23259F4 /* Pods-DFishTV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

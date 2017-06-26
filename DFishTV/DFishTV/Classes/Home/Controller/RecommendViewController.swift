@@ -9,6 +9,7 @@
 
 
 import UIKit
+import Alamofire
 
 private let contentNormalCellID =  "contentNormalCellID"
 private let contentPrettyCellID =  "contentPrettyCellID"
@@ -57,6 +58,17 @@ class RecommendViewController: UIViewController {
 
         //创建UI界面
         setupUI()
+//        
+//        
+//        Alamofire.request("http://httpbin.org/get").responseJSON { (response) in
+//            
+//            guard let result = response.result.value else {
+//                print(response.result.error as Any)
+//                return
+//            }
+//            print(result)
+//        }
+        
     }
 }
 
