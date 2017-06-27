@@ -78,6 +78,12 @@
                 <constraint firstAttribute="bottom" secondItem="CJ1-bF-tzZ" secondAttribute="bottom" constant="5" id="zht-WF-65j"/>
             </constraints>
             <size key="customSize" width="141" height="136"/>
+            <connections>
+                <outlet property="pretty_adds" destination="GhM-rr-l0E" id="9GF-CN-20n"/>
+                <outlet property="pretty_img" destination="0ku-MI-5fj" id="1uU-re-4Sg"/>
+                <outlet property="pretty_online" destination="697-Hv-sji" id="nGH-js-Hcz"/>
+                <outlet property="pretty_player" destination="CJ1-bF-tzZ" id="LPd-Wt-aHF"/>
+            </connections>
             <point key="canvasLocation" x="-142" y="-43"/>
         </collectionViewCell>
     </objects>

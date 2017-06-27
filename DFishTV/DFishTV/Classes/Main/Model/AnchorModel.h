@@ -24,7 +24,7 @@
 //游戏名称
 @property (nonatomic,strong)NSString *game_name;
 //在线观看人数
-@property (nonatomic,strong)NSString *online;
+@property (nonatomic,assign)int online;
 //所在城市
 @property (nonatomic,strong)NSString *anchor_city;
 

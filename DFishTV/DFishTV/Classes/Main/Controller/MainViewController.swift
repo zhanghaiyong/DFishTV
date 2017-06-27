@@ -19,6 +19,7 @@ class MainViewController: UITabBarController {
         addChildVc(storyName: "Follow")
         addChildVc(storyName: "Discovery")
         addChildVc(storyName: "Profile")
+        self.tabBar.barTintColor = UIColor.white
         
     }
     

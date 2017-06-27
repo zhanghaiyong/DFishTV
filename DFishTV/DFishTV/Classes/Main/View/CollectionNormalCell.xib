@@ -71,6 +71,12 @@
                 <constraint firstAttribute="trailing" secondItem="69O-DF-FZr" secondAttribute="trailing" constant="5" id="jRh-jN-JSn"/>
             </constraints>
             <size key="customSize" width="151" height="122"/>
+            <connections>
+                <outlet property="normal_img" destination="qG8-xi-yAn" id="Zz2-lM-JEu"/>
+                <outlet property="normal_online" destination="69O-DF-FZr" id="7ZX-ol-dvO"/>
+                <outlet property="normal_player" destination="Mwz-pv-K7E" id="5PT-qq-o0d"/>
+                <outlet property="normal_roomName" destination="g7c-YV-nxf" id="Yzr-eV-9R7"/>
+            </connections>
             <point key="canvasLocation" x="-161.5" y="-120"/>
         </collectionViewCell>
     </objects>

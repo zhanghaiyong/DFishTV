@@ -6,14 +6,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="CollectionHeaderView" customModule="DFishTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C2p-Ao-Hbb">
@@ -23,20 +22,21 @@
                         <constraint firstAttribute="height" constant="10" id="ZRy-la-Bad"/>
                     </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_header_hot" translatesAutoresizingMaskIntoConstraints="NO" id="gaG-eh-QSS">
-                    <rect key="frame" x="0.0" y="10" width="35" height="35"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_header_hot" translatesAutoresizingMaskIntoConstraints="NO" id="gaG-eh-QSS">
+                    <rect key="frame" x="5" y="18" width="20" height="20"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="gaG-eh-QSS" secondAttribute="height" multiplier="1:1" id="2Na-Y5-Inp"/>
+                        <constraint firstAttribute="width" constant="20" id="IYx-fd-KBX"/>
+                        <constraint firstAttribute="height" constant="20" id="qdz-Z6-6MH"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最热" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhS-Jf-Rdb">
-                    <rect key="frame" x="35" y="19" width="29" height="17"/>
+                    <rect key="frame" x="25" y="19.5" width="29" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cF-97-QWz">
-                    <rect key="frame" x="260" y="8" width="60" height="40"/>
+                    <rect key="frame" x="260" y="8.5" width="60" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="ggy-ay-ARJ"/>
                         <constraint firstAttribute="width" constant="60" id="sxZ-5g-9Gm"/>
@@ -55,14 +55,17 @@
                 <constraint firstItem="zhS-Jf-Rdb" firstAttribute="leading" secondItem="gaG-eh-QSS" secondAttribute="trailing" id="0up-6l-Af4"/>
                 <constraint firstItem="C2p-Ao-Hbb" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="1YU-Z7-PTE"/>
                 <constraint firstItem="zhS-Jf-Rdb" firstAttribute="centerY" secondItem="gaG-eh-QSS" secondAttribute="centerY" id="8Te-zN-aVV"/>
-                <constraint firstItem="gaG-eh-QSS" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="BKc-CB-cBn"/>
-                <constraint firstItem="gaG-eh-QSS" firstAttribute="top" secondItem="C2p-Ao-Hbb" secondAttribute="bottom" id="Dj6-fH-BBc"/>
+                <constraint firstItem="gaG-eh-QSS" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="5" id="BKc-CB-cBn"/>
+                <constraint firstItem="gaG-eh-QSS" firstAttribute="top" secondItem="C2p-Ao-Hbb" secondAttribute="bottom" constant="8" id="NpZ-4v-epf"/>
                 <constraint firstAttribute="trailing" secondItem="C2p-Ao-Hbb" secondAttribute="trailing" id="k52-0z-gGc"/>
-                <constraint firstAttribute="bottom" secondItem="gaG-eh-QSS" secondAttribute="bottom" id="rNa-N4-v66"/>
                 <constraint firstItem="C2p-Ao-Hbb" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="sam-ON-Epp"/>
                 <constraint firstItem="9cF-97-QWz" firstAttribute="centerY" secondItem="zhS-Jf-Rdb" secondAttribute="centerY" id="wmB-7R-CDD"/>
             </constraints>
-            <point key="canvasLocation" x="34" y="48.5"/>
+            <connections>
+                <outlet property="collectionHeaderImg" destination="gaG-eh-QSS" id="Ueb-WC-uXU"/>
+                <outlet property="collectionHeaderTitle" destination="zhS-Jf-Rdb" id="74P-Bg-ZzX"/>
+            </connections>
+            <point key="canvasLocation" x="-301" y="8"/>
         </collectionReusableView>
     </objects>
     <resources>

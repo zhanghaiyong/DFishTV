@@ -8,5 +8,6 @@ target 'DFishTV' do
 
   pod 'Alamofire'
   pod 'MJExtension'
+pod 'Kingfisher'
 
 end
