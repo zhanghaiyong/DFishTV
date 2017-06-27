@@ -19,4 +19,6 @@
 // 定义主播的模型对象数组
 @property (nonatomic,strong)NSArray  *anchors;
 
+@property (nonatomic,strong)NSArray  *room_list;
+
 @end

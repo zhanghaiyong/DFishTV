@@ -21,8 +21,13 @@
 @property (nonatomic,strong)NSString *room_name;
 //主播昵称
 @property (nonatomic,strong)NSString *nickname;
+//游戏名称
+@property (nonatomic,strong)NSString *game_name;
 //在线观看人数
 @property (nonatomic,strong)NSString *online;
 //所在城市
 @property (nonatomic,strong)NSString *anchor_city;
+
+
+
 @end

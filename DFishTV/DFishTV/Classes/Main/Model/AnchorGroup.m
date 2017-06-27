@@ -13,4 +13,10 @@
 
     return  @{@"anchors":[AnchorModel class]};
 }
+
+-(void)setRoom_list:(NSArray *)room_list {
+
+    self.anchors = [AnchorModel mj_objectArrayWithKeyValuesArray:room_list];
+}
+
 @end

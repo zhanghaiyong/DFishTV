@@ -16,6 +16,8 @@ let kScreenH : CGFloat = UIScreen.main.bounds.height
 //最热
 let kHot = "https://capi.douyucdn.cn/api/v1/getbigDataRoom?client_sys=ios"
 let kOtherType = "https://capi.douyucdn.cn/api/v1/getHotCate?aid=ios&client_sys=ios&time=1498485300&auth=6bfdaadb00d47cfaf5461c5ffd04072a"
-let kBanner = "https://capi.douyucdn.cn/api/v1/slide/6?version=2.501&client_sys=ios"
 let middleType = "https://apiv2.douyucdn.cn/live/home/custom?client_sys=ios"
+
+let kBanner = "https://capi.douyucdn.cn/api/v1/slide/6?version=2.501&client_sys=ios"
+
 

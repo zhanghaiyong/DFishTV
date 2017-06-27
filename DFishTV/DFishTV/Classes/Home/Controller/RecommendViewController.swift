@@ -59,6 +59,8 @@ class RecommendViewController: UIViewController {
         //创建UI界面
         setupUI()
 
+        RecommendModelView().requestDataMethod()
+        
         hotData()
     }
 }
